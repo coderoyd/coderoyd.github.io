@@ -503,7 +503,27 @@
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
 
-      .hero { padding: 80px 24px 64px; }
+      .hero {
+        padding: 80px 24px 64px;
+        min-height: 100svh;
+        justify-content: flex-end;
+      }
+
+      .hero-bg {
+        background-position: 68% top;
+        background-size: cover;
+      }
+
+      .hero-overlay {
+        background:
+          linear-gradient(to top,
+            rgba(8,8,8,1)    0%,
+            rgba(8,8,8,0.92) 35%,
+            rgba(8,8,8,0.45) 60%,
+            rgba(8,8,8,0.1)  100%
+          );
+      }
+
       .hero-title { font-size: clamp(5.5rem, 22vw, 9rem); }
 
       .gestures    { padding: 80px 24px; }
