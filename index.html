@@ -216,6 +216,67 @@
       color: rgba(255,255,255,0.38);
     }
 
+    .hero-email-form {
+      display: flex;
+      gap: 10px;
+      margin-top: 28px;
+      max-width: 420px;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 1.3s forwards;
+    }
+
+    .hero-email-input {
+      flex: 1;
+      padding: 13px 18px;
+      border: 1.5px solid rgba(255,255,255,0.25);
+      border-radius: 10px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .hero-email-input:focus {
+      border-color: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.12);
+    }
+
+    .hero-email-input::placeholder { color: rgba(255,255,255,0.35); }
+
+    .hero-email-btn {
+      padding: 13px 22px;
+      background: #fff;
+      color: #111;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .hero-email-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .hero-email-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+    .hero-email-success {
+      display: none;
+      margin-top: 16px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+      animation: fadeUp 0.4s ease forwards;
+    }
+
+    .hero-email-success.visible { display: block; }
+
+    @media (max-width: 768px) {
+      .hero-email-form { flex-direction: column; max-width: 100%; }
+      .hero-email-btn { width: 100%; }
+    }
+
     /* ── GESTURES ─────────────────────────────── */
     .gestures {
       padding: 120px 80px;
@@ -452,6 +513,71 @@
 
     .footer-copy { font-size: 0.82rem; color: rgba(0,0,0,0.22); }
 
+    /* ── EMAIL CAPTURE ────────────────────────── */
+    .email-section {
+      padding: 100px 80px;
+      background: var(--card);
+      text-align: center;
+    }
+
+    .email-section .section-eyebrow { margin-bottom: 12px; }
+    .email-section .section-title   { margin-bottom: 48px; }
+
+    .email-form {
+      display: flex;
+      gap: 12px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .email-input {
+      flex: 1;
+      padding: 14px 20px;
+      border: 1.5px solid rgba(0,0,0,0.15);
+      border-radius: 10px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      background: #fff;
+      color: #111;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .email-input:focus { border-color: #111; }
+    .email-input::placeholder { color: rgba(0,0,0,0.35); }
+
+    .email-btn {
+      padding: 14px 28px;
+      background: #111;
+      color: #FAFAF8;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .email-btn:hover { background: #333; transform: translateY(-1px); }
+    .email-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+    .email-success {
+      display: none;
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: rgba(0,0,0,0.5);
+    }
+
+    .email-success.visible { display: block; }
+
+    @media (max-width: 768px) {
+      .email-section { padding: 80px 24px; }
+      .email-form { flex-direction: column; }
+      .email-btn { width: 100%; }
+    }
+
     /* ── KEYFRAMES ────────────────────────────── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
@@ -575,12 +701,7 @@
   <!-- ── NAV ───────────────────────────────────── -->
   <nav id="nav">
     <a href="#" class="nav-logo">TILT</a>
-    <a href="https://apps.apple.com/app/tilt-focus-timer/id6758234044" class="nav-cta">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
-        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-      </svg>
-      Download
-    </a>
+    <a href="#emailForm" class="nav-cta">Coming Soon</a>
   </nav>
 
   <!-- ── HERO ──────────────────────────────────── -->
@@ -592,16 +713,22 @@
       <h1 class="hero-title">TILT</h1>
       <p class="hero-tagline">Tilt to start. Rotate to switch.<br>Shake to reset. No buttons. Just focus.</p>
       <div class="hero-cta-wrap">
-        <a href="https://apps.apple.com/app/tilt-focus-timer/id6758234044" class="hero-cta">
+        <a href="#emailForm" class="hero-cta">
           <svg viewBox="0 0 24 24" fill="currentColor">
             <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
           </svg>
           <div class="hero-cta-text">
-            <span class="hero-cta-small">Download on the</span>
+            <span class="hero-cta-small">Available soon on the</span>
             <span class="hero-cta-large">App Store</span>
           </div>
         </a>
-        <span class="hero-sub">Free to start. iPhone only.</span>
+        <span class="hero-sub">Get notified when it launches.</span>
+      </div>
+      <form class="hero-email-form" id="heroEmailForm">
+        <input class="hero-email-input" type="email" id="heroEmailInput" placeholder="your@email.com" required>
+        <button class="hero-email-btn" type="submit" id="heroEmailBtn">Notify me</button>
+      </form>
+      <p class="hero-email-success" id="heroEmailSuccess">You're on the list. We'll send you the link the moment it's live.</p>
       </div>
     </div>
   </section>
@@ -718,6 +845,17 @@
     </div>
   </section>
 
+  <!-- ── EMAIL CAPTURE ─────────────────────────── -->
+  <section class="email-section reveal">
+    <p class="section-eyebrow">Stay in the loop</p>
+    <h2 class="section-title">Get notified when<br>it's available.</h2>
+    <form class="email-form" id="emailForm">
+      <input class="email-input" type="email" id="emailInput" placeholder="your@email.com" required>
+      <button class="email-btn" type="submit" id="emailBtn">Notify me</button>
+    </form>
+    <p class="email-success" id="emailSuccess">You're on the list. We'll let you know the moment it's live.</p>
+  </section>
+
   <!-- ── FAQ ────────────────────────────────────── -->
   <section class="faq-section">
     <div class="reveal">
@@ -747,7 +885,7 @@
       </div>
       <div class="faq-item">
         <p class="faq-q">Does Tilt collect my data?</p>
-        <p class="faq-a">Nope. No accounts, no cloud sync, no data collection. Everything stays on your device. More help: <a href="mailto:code@roydsantiago.com">code@roydsantiago.com</a></p>
+        <p class="faq-a">Nope. No accounts, no cloud sync, no data collection. Everything stays on your device. More help: <a href="/cdn-cgi/l/email-protection#f5969a9190b5879a8c9186949b819c94929adb969a98"><span class="__cf_email__" data-cfemail="30535f545570425f495443515e445951575f1e535f5d">[email&#160;protected]</span></a></p>
       </div>
     </div>
   </section>
@@ -757,13 +895,13 @@
     <span class="footer-logo">TILT</span>
     <div class="footer-links">
       <a href="https://gist.github.com/coderoyd/c78fad6a09378ad0b7080ad446a0f75b/raw/6ca2228c8eb3b68ba1299eed01af04736d11a7a2/tilt-privacy-policy.md">Privacy Policy</a>
-      <a href="mailto:code@roydsantiago.com">Contact</a>
+      <a href="/cdn-cgi/l/email-protection#c4a7aba0a184b6abbda0b7a5aab0ada5a3abeaa7aba9">Contact</a>
       <a href="https://apps.apple.com/app/tilt-focus-timer/id6758234044">App Store</a>
     </div>
     <span class="footer-copy">© 2026 Royd Santiago</span>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Nav: dark over hero, light over rest of page
     const nav = document.getElementById('nav');
     const hero = document.querySelector('.hero');
@@ -811,7 +949,73 @@
       const x = e.pageX - scroll.offsetLeft;
       scroll.scrollLeft = scrollLeft - (x - startX) * 1.4;
     });
-  </script>
 
+    // Loops email capture
+    const emailForm = document.getElementById('emailForm');
+    const emailInput = document.getElementById('emailInput');
+    const emailBtn = document.getElementById('emailBtn');
+    const emailSuccess = document.getElementById('emailSuccess');
+
+    emailForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = emailInput.value.trim();
+      if (!email) return;
+      emailBtn.disabled = true;
+      emailBtn.textContent = 'Sending...';
+      try {
+        const body = new URLSearchParams({ email });
+        const res = await fetch('https://app.loops.so/api/newsletter-form/cmnuc155lwoh0izoqu71pw', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: body.toString()
+        });
+        if (res.ok) {
+          emailForm.style.display = 'none';
+          emailSuccess.classList.add('visible');
+        } else {
+          emailBtn.disabled = false;
+          emailBtn.textContent = 'Notify me';
+        }
+      } catch {
+        emailBtn.disabled = false;
+        emailBtn.textContent = 'Notify me';
+      }
+    });
+
+  </script>
 </body>
 </html>
+
+<script>
+    // Hero email capture
+    const heroForm = document.getElementById('heroEmailForm');
+    const heroInput = document.getElementById('heroEmailInput');
+    const heroBtn = document.getElementById('heroEmailBtn');
+    const heroSuccess = document.getElementById('heroEmailSuccess');
+
+    heroForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = heroInput.value.trim();
+      if (!email) return;
+      heroBtn.disabled = true;
+      heroBtn.textContent = 'Sending...';
+      try {
+        const body = new URLSearchParams({ email });
+        const res = await fetch('https://app.loops.so/api/newsletter-form/cmnuc155lwoh0izoqu71pw', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: body.toString()
+        });
+        if (res.ok) {
+          heroForm.style.display = 'none';
+          heroSuccess.classList.add('visible');
+        } else {
+          heroBtn.disabled = false;
+          heroBtn.textContent = 'Notify me';
+        }
+      } catch {
+        heroBtn.disabled = false;
+        heroBtn.textContent = 'Notify me';
+      }
+    });
+</script>
