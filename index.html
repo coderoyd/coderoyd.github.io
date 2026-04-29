@@ -176,15 +176,18 @@
       text-transform: uppercase;
       color: rgba(255,255,255,0.5);
       margin-bottom: 32px;
+      max-width: clamp(8rem, 24vw, 18rem);
+      line-height: 1.6;
       opacity: 0;
       animation: fadeUp 0.6s ease 0.2s forwards;
     }
+    .hero-label span { display: inline-block; white-space: nowrap; }
 
     .hero-title {
       font-family: 'Bebas Neue', cursive;
-      font-size: clamp(10rem, 32vw, 24rem);
+      font-size: clamp(8rem, 24vw, 18rem);
       line-height: 0.82;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.03em;
       color: #FFFFFF;
       margin-bottom: 36px;
       opacity: 0;
@@ -717,7 +720,7 @@
           );
       }
 
-      .hero-title { font-size: clamp(7rem, 32vw, 14rem); letter-spacing: 0.04em; }
+      .hero-title { font-size: clamp(6rem, 26vw, 11rem); letter-spacing: 0.03em; }
 
       .gestures    { padding: 80px 24px; }
       .features    { padding: 0; }
@@ -753,7 +756,7 @@
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-label">Less friction. More focus.</p>
+      <p class="hero-label"><span>Less friction.</span> <span>More focus.</span></p>
       <h1 class="hero-title">TILT</h1>
       <p class="hero-tagline">Tilt to start. Rotate to switch.<br>Shake to reset. No buttons. Just focus.</p>
       <div class="hero-cta-wrap">
