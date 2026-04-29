@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TILT — Press Kit</title>
+  <meta name="description" content="Press kit for TILT — a gesture-powered focus timer for iPhone.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://code.roydsantiago.com/press" />
+  <meta property="og:title" content="TILT — Press Kit" />
+  <meta property="og:description" content="Press kit for TILT — a gesture-powered focus timer for iPhone." />
+  <meta property="og:image" content="https://code.roydsantiago.com/WebHero.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --black: #0A0A0A;
+      --ink: #1A1A1A;
+      --paper: #FAFAF7;
+      --warm-grey: #ECEAE3;
+      --border: rgba(0,0,0,0.1);
+      --muted: rgba(0,0,0,0.5);
+      --soft-muted: rgba(0,0,0,0.35);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Outfit', -apple-system, sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HEADER ─────────────────────────────── */
+    header {
+      background: var(--black);
+      padding: 56px 80px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    .header-left { flex: 1; }
+    .wordmark {
+      font-family: 'Bebas Neue', Arial Black, Impact, sans-serif;
+      font-size: 6rem;
+      line-height: 1;
+      letter-spacing: 0.06em;
+      color: #FFFFFF;
+      display: block;
+      margin-bottom: 14px;
+    }
+    .header-sub {
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+    .header-icon img {
+      display: block;
+      border-radius: 24px;
+      width: 120px;
+      height: 120px;
+    }
+
+    /* ── MAIN ─────────────────────────────── */
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+
+    .eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--soft-muted);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', Arial Black, Impact, sans-serif;
+      font-size: 4.5rem;
+      line-height: 0.95;
+      letter-spacing: 0.04em;
+      color: var(--black);
+      margin-bottom: 24px;
+    }
+
+    .lede {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      font-weight: 300;
+      color: var(--ink);
+      max-width: 680px;
+    }
+
+    /* ── SECTIONS ─────────────────────────────── */
+    section { margin-top: 80px; }
+
+    h2 {
+      font-family: 'Bebas Neue', Arial Black, Impact, sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.06em;
+      color: var(--black);
+      margin-bottom: 24px;
+      padding-top: 32px;
+      border-top: 1px solid var(--black);
+    }
+
+    p { margin-bottom: 20px; max-width: 680px; }
+    p:last-child { margin-bottom: 0; }
+
+    strong { font-weight: 600; color: var(--black); }
+
+    /* ── FACT SHEET ─────────────────────────────── */
+    .fact-sheet {
+      background: #F0EFE9;
+      border-radius: 12px;
+      padding: 32px 40px;
+      margin-top: 24px;
+    }
+    .fact-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      gap: 24px;
+    }
+    .fact-row:last-child { border-bottom: none; }
+    .fact-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--soft-muted);
+      align-self: center;
+    }
+    .fact-value {
+      font-size: 0.95rem;
+      color: var(--ink);
+    }
+    .fact-value a { color: var(--black); text-decoration: underline; text-decoration-color: rgba(0,0,0,0.3); }
+    .fact-value a:hover { text-decoration-color: var(--black); }
+
+    /* ── CTA BUTTON ─────────────────────────────── */
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: var(--black);
+      color: #FFFFFF;
+    }
+    .btn-primary:hover { transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--black);
+      border: 1px solid rgba(0,0,0,0.2);
+    }
+    .btn-secondary:hover { background: rgba(0,0,0,0.04); border-color: var(--black); }
+    .btn svg { width: 16px; height: 16px; fill: currentColor; }
+
+    /* ── BOILERPLATE ─────────────────────────────── */
+    .boilerplate {
+      background: #F5F4EF;
+      border-left: 3px solid var(--black);
+      padding: 24px 28px;
+      margin-top: 24px;
+      border-radius: 0 8px 8px 0;
+    }
+    .boilerplate p { font-size: 0.95rem; }
+
+    /* ── FOUNDER ─────────────────────────────── */
+    .founder {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 32px;
+      align-items: start;
+      margin-top: 24px;
+    }
+    .founder-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--warm-grey);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', Arial Black, sans-serif;
+      font-size: 2.5rem;
+      color: var(--soft-muted);
+    }
+    .founder-bio h3 {
+      font-family: 'Bebas Neue', Arial Black, sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.04em;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+    .founder-role {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--soft-muted);
+      margin-bottom: 16px;
+    }
+
+    /* ── ASSETS GRID ─────────────────────────────── */
+    .assets-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .asset-card {
+      background: #F0EFE9;
+      border-radius: 10px;
+      padding: 24px;
+      text-decoration: none;
+      color: var(--ink);
+      transition: all 0.2s;
+      display: block;
+    }
+    .asset-card:hover {
+      background: #E8E6DF;
+      transform: translateY(-2px);
+    }
+    .asset-card-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--soft-muted);
+      margin-bottom: 8px;
+    }
+    .asset-card-name {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+    .asset-card-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* ── QUOTES ─────────────────────────────── */
+    .quote {
+      font-family: 'Bebas Neue', Arial Black, sans-serif;
+      font-size: 2rem;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      color: var(--black);
+      max-width: 720px;
+      padding: 8px 0 8px 24px;
+      border-left: 3px solid var(--black);
+      margin: 24px 0;
+    }
+
+    /* ── CONTACT ─────────────────────────────── */
+    .contact-block {
+      background: var(--black);
+      color: #FFFFFF;
+      padding: 48px 40px;
+      border-radius: 12px;
+      margin-top: 24px;
+    }
+    .contact-block h2 {
+      color: #FFFFFF;
+      border-top-color: rgba(255,255,255,0.2);
+    }
+    .contact-block p { color: rgba(255,255,255,0.75); }
+    .contact-block a { color: #FFFFFF; text-decoration: underline; }
+    .contact-block .btn-primary {
+      background: #FFFFFF;
+      color: var(--black);
+    }
+
+    /* ── FOOTER ─────────────────────────────── */
+    footer {
+      background: var(--warm-grey);
+      padding: 32px 40px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+    footer p {
+      font-size: 0.78rem;
+      color: var(--soft-muted);
+      margin: 0;
+    }
+    footer a { color: var(--ink); text-decoration: underline; }
+
+    /* ── BOTTOM STRIP ─────────────────────────────── */
+    .bottom-strip { height: 6px; background: var(--black); }
+
+    /* ── MOBILE ─────────────────────────────── */
+    @media (max-width: 720px) {
+      header { padding: 40px 32px 48px; flex-direction: column; align-items: flex-start; gap: 24px; }
+      .wordmark { font-size: 4.5rem; }
+      .header-icon img { width: 80px; height: 80px; }
+      main { padding: 56px 24px; }
+      h1 { font-size: 3rem; }
+      .lede { font-size: 1.1rem; }
+      .fact-row { grid-template-columns: 1fr; gap: 4px; padding: 16px 0; }
+      .fact-sheet { padding: 24px; }
+      .founder { grid-template-columns: 1fr; gap: 16px; }
+      .quote { font-size: 1.5rem; }
+      .contact-block { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── HEADER ─────────────────────────────── -->
+  <header>
+    <div class="header-left">
+      <span class="wordmark">TILT</span>
+      <span class="header-sub">Less friction. More focus.</span>
+    </div>
+    <div class="header-icon">
+      <img src="https://code.roydsantiago.com/icons/Tilt%20Light.png" alt="TILT app icon" />
+    </div>
+  </header>
+
+  <!-- ── MAIN ─────────────────────────────── -->
+  <main>
+
+    <!-- INTRO -->
+    <section style="margin-top: 0;">
+      <span class="eyebrow">Press Kit</span>
+      <h1>For media, creators,<br/>and partners.</h1>
+      <p class="lede">Everything you need to write about TILT, in one place. Brand assets, screenshots, founder bio, and product information.</p>
+
+      <div class="cta-row">
+        <a href="https://drive.google.com/drive/folders/12ybArB2AZ_qr0EU0cr9EMirUGCc1GPtN?usp=share_link" class="btn btn-primary" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>
+          Open Press Kit on Drive
+        </a>
+        <a href="mailto:code@roydsantiago.com" class="btn btn-secondary">
+          Contact for interviews
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+      <div class="contact-block">
+        <h2>Get in Touch</h2>
+        <p>For interviews, demos, review codes, or anything else, reach out directly. Royd is responsive and happy to talk.</p>
+
+        <div class="cta-row">
+          <a href="mailto:code@roydsantiago.com" class="btn btn-primary">
+            code@roydsantiago.com
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────── -->
+  <footer>
+    <p>© 2026 Royd Santiago · Code Royd · <a href="https://code.roydsantiago.com">code.roydsantiago.com</a></p>
+  </footer>
+
+  <div class="bottom-strip"></div>
+
+</body>
+</html>
